@@ -31,9 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.inventoryGrid = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.inventorySearchTxtbox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.inventorySearchBtn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.inventorySearchTxtbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +60,7 @@
             this.inventoryGrid.RowTemplate.Height = 25;
             this.inventoryGrid.Size = new System.Drawing.Size(853, 362);
             this.inventoryGrid.TabIndex = 1;
+            this.inventoryGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.inventoryGrid_CellDoubleClick);
             // 
             // panel1
             // 
@@ -73,12 +74,15 @@
             this.panel1.Size = new System.Drawing.Size(865, 54);
             this.panel1.TabIndex = 2;
             // 
-            // inventorySearchTxtbox
+            // inventorySearchBtn
             // 
-            this.inventorySearchTxtbox.Location = new System.Drawing.Point(130, 10);
-            this.inventorySearchTxtbox.Name = "inventorySearchTxtbox";
-            this.inventorySearchTxtbox.Size = new System.Drawing.Size(192, 26);
-            this.inventorySearchTxtbox.TabIndex = 0;
+            this.inventorySearchBtn.Location = new System.Drawing.Point(351, 10);
+            this.inventorySearchBtn.Name = "inventorySearchBtn";
+            this.inventorySearchBtn.Size = new System.Drawing.Size(75, 34);
+            this.inventorySearchBtn.TabIndex = 2;
+            this.inventorySearchBtn.Text = "Search";
+            this.inventorySearchBtn.UseVisualStyleBackColor = true;
+            this.inventorySearchBtn.Click += new System.EventHandler(this.inventorySearchBtn_Click);
             // 
             // label2
             // 
@@ -89,15 +93,12 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Item name:";
             // 
-            // inventorySearchBtn
+            // inventorySearchTxtbox
             // 
-            this.inventorySearchBtn.Location = new System.Drawing.Point(351, 10);
-            this.inventorySearchBtn.Name = "inventorySearchBtn";
-            this.inventorySearchBtn.Size = new System.Drawing.Size(75, 34);
-            this.inventorySearchBtn.TabIndex = 2;
-            this.inventorySearchBtn.Text = "Search";
-            this.inventorySearchBtn.UseVisualStyleBackColor = true;
-            this.inventorySearchBtn.Click += new System.EventHandler(this.inventorySearchBtn_Click);
+            this.inventorySearchTxtbox.Location = new System.Drawing.Point(130, 10);
+            this.inventorySearchTxtbox.Name = "inventorySearchTxtbox";
+            this.inventorySearchTxtbox.Size = new System.Drawing.Size(192, 26);
+            this.inventorySearchTxtbox.TabIndex = 0;
             // 
             // Shop
             // 
@@ -112,6 +113,7 @@
             this.Name = "Shop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Shop";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Shop_FormClosed);
             this.Load += new System.EventHandler(this.Shop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.inventoryGrid)).EndInit();
             this.panel1.ResumeLayout(false);

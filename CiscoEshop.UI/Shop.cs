@@ -45,5 +45,31 @@ namespace CiscoEshop.UI
 
             }
         }
+
+
+
+        private void inventoryGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                ItemDetail itemDetail = new ItemDetail();
+                DataGridViewRow row = this.inventoryGrid.Rows[e.RowIndex];
+                itemDetail.detailNameTxtbox.Text = row.Cells[0].Value.ToString();
+                itemDetail.detailCostTxtbox.Text = row.Cells[1].Value.ToString();
+                itemDetail.detailFirewallTxtbox.Text = row.Cells[2].Value.ToString();
+                itemDetail.ShowDialog();
+            }
+        }
+
+        private void Shop_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void inventoryGrid_SelectionChanged(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("Please enter some text first", "Search Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
