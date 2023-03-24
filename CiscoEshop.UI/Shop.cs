@@ -19,12 +19,14 @@ namespace CiscoEshop.UI
             InitializeComponent();
             _items = new List<Router>
             {
-                new Router {Name = "CISCO RI4MX",Price=23.5,BuiltInFirewall=true },
-                new Router {Name = "CISCO RI4MX Version 1",Price=182,BuiltInFirewall=true },
-                new Router {Name = "CISCO AMB6X",Price=210,BuiltInFirewall=false },
-                new Router {Name = "CISCO RA6mX",Price=103.5,BuiltInFirewall=false }
+                new Router {Name = "CISCO RI4kmX",Price=23.5,BuiltInFirewall=true, Icon= new Bitmap(Image.FromFile(@"Data\Assets\Images\cisco1.jpg"),new Size(70,100)) },
+                new Router {Name = "CISCO RI4MX Version 1",Price=182,BuiltInFirewall=true, Icon= new Bitmap(Image.FromFile(@"Data\Assets\Images\cisco2.jpg"),new Size(70,100)) },
+                new Router {Name = "CISCO AMB6X",Price=210,BuiltInFirewall=false, Icon= new Bitmap(Image.FromFile(@"Data\Assets\Images\cisco3.jpg"),new Size(70,100)) },
+                new Router {Name = "CISCO RA6mX",Price=103.5,BuiltInFirewall=false , Icon= new Bitmap(Image.FromFile(@"Data\Assets\Images\cisco1.jpg"),new Size(70,100))}
             }.OrderBy(a => a.Name).ToList();
+
             inventoryGrid.DataSource = _items;
+            inventoryGrid.RowTemplate.Height = 100;
         }
 
         private void Shop_Load(object sender, EventArgs e)
