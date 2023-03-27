@@ -35,12 +35,14 @@
             this.detailCostTxtbox = new System.Windows.Forms.TextBox();
             this.detailFirewallTxtbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.itemIconPicturebox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.itemIconPicturebox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 105);
+            this.label1.Location = new System.Drawing.Point(25, 284);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 19);
             this.label1.TabIndex = 0;
@@ -49,7 +51,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 139);
+            this.label2.Location = new System.Drawing.Point(25, 318);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 19);
             this.label2.TabIndex = 0;
@@ -58,7 +60,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 170);
+            this.label3.Location = new System.Drawing.Point(25, 349);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 19);
             this.label3.TabIndex = 0;
@@ -66,7 +68,7 @@
             // 
             // detailNameTxtbox
             // 
-            this.detailNameTxtbox.Location = new System.Drawing.Point(153, 100);
+            this.detailNameTxtbox.Location = new System.Drawing.Point(153, 279);
             this.detailNameTxtbox.Name = "detailNameTxtbox";
             this.detailNameTxtbox.ReadOnly = true;
             this.detailNameTxtbox.Size = new System.Drawing.Size(263, 26);
@@ -74,7 +76,7 @@
             // 
             // detailCostTxtbox
             // 
-            this.detailCostTxtbox.Location = new System.Drawing.Point(153, 132);
+            this.detailCostTxtbox.Location = new System.Drawing.Point(153, 311);
             this.detailCostTxtbox.Name = "detailCostTxtbox";
             this.detailCostTxtbox.ReadOnly = true;
             this.detailCostTxtbox.Size = new System.Drawing.Size(263, 26);
@@ -82,7 +84,7 @@
             // 
             // detailFirewallTxtbox
             // 
-            this.detailFirewallTxtbox.Location = new System.Drawing.Point(153, 163);
+            this.detailFirewallTxtbox.Location = new System.Drawing.Point(153, 342);
             this.detailFirewallTxtbox.Name = "detailFirewallTxtbox";
             this.detailFirewallTxtbox.ReadOnly = true;
             this.detailFirewallTxtbox.Size = new System.Drawing.Size(263, 26);
@@ -99,11 +101,20 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Router Details";
             // 
+            // itemIconPicturebox
+            // 
+            this.itemIconPicturebox.Location = new System.Drawing.Point(154, 88);
+            this.itemIconPicturebox.Name = "itemIconPicturebox";
+            this.itemIconPicturebox.Size = new System.Drawing.Size(265, 167);
+            this.itemIconPicturebox.TabIndex = 3;
+            this.itemIconPicturebox.TabStop = false;
+            // 
             // ItemDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(552, 507);
+            this.Controls.Add(this.itemIconPicturebox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.detailFirewallTxtbox);
             this.Controls.Add(this.detailCostTxtbox);
@@ -116,6 +127,7 @@
             this.Name = "ItemDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Item Detail";
+            ((System.ComponentModel.ISupportInitialize)(this.itemIconPicturebox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,5 +142,6 @@
         public TextBox detailCostTxtbox;
         public TextBox detailFirewallTxtbox;
         private Label label4;
+        public PictureBox itemIconPicturebox;
     }
 }

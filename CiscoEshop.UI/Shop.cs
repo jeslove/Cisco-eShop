@@ -56,9 +56,10 @@ namespace CiscoEshop.UI
             {
                 ItemDetail itemDetail = new ItemDetail();
                 DataGridViewRow row = this.inventoryGrid.Rows[e.RowIndex];
-                itemDetail.detailNameTxtbox.Text = row.Cells[0].Value.ToString();
-                itemDetail.detailCostTxtbox.Text = row.Cells[1].Value.ToString();
-                itemDetail.detailFirewallTxtbox.Text = row.Cells[2].Value.ToString();
+                itemDetail.itemIconPicturebox.Image = (Image)row.Cells[0].Value;
+                itemDetail.detailNameTxtbox.Text = row.Cells[1].Value.ToString();
+                itemDetail.detailCostTxtbox.Text = row.Cells[2].Value.ToString();
+                itemDetail.detailFirewallTxtbox.Text = row.Cells[3].Value.ToString();
                 itemDetail.ShowDialog();
             }
         }
